@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>支持向量机 · GitBook 使用教程</title>
+        <title>支持向量机 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="HG1227">
+        <meta name="author" content="HHG">
         
         
-    
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
@@ -26,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -50,11 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
@@ -66,11 +61,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -101,11 +100,7 @@
         
     
 
-
-    
-
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -120,15 +115,6 @@
     
     
     <link rel="prev" href="聚类算法K-Means.html" />
-    
-
-    
-        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
-    
-    
-        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
-    
-    
     
 
     </head>
@@ -809,7 +795,7 @@
 <ul>
 <li><p><code>kernel</code>  &#xFF1A;&#x6838;&#x51FD;&#x6570;&#xFF0C;&#x9ED8;&#x8BA4;&#x662F; <code>rbf</code>&#xFF0C;&#x53EF;&#x4EE5;&#x662F; <code>linear</code> , <code>poly</code> , <code>rbf</code>, <code>sigmoid</code>, <code>precomputed</code> </p>
 <center>
-   <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231174645.png"> 
+   <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231174645.png" data-lightbox="036d32eb-98c5-4ab4-83dd-1c2c4ccab1e7" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231174645.png" alt="undefined"></a> 
 </center>
 </li>
 <li><p><code>degree</code> &#xFF1A;&#x6574;&#x6570;&#xFF0C;&#x53EF;&#x4E0D;&#x586B;&#xFF0C;&#x9ED8;&#x8BA4;3,  &#x591A;&#x9879;&#x5F0F;&#x6838;&#x51FD;&#x6570;&#x7684;&#x6B21;&#x6570;&#xFF08;<code>poly</code>&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x6838;&#x51FD;&#x6570;&#x6CA1;&#x6709;&#x9009;&#x62E9;<code>poly</code>&#xFF0C;&#x8FD9;&#x4E2A;&#x53C2;&#x6570;&#x4F1A;&#x88AB;&#x5FFD;&#x7565;</p>
@@ -826,7 +812,7 @@
  &#x6838;&#x51FD;&#x6570;&#x4E2D;&#x7684;&#x5E38;&#x6570;&#x9879;&#xFF0C;&#x5B83;&#x53EA;&#x5728;&#x53C2;&#x6570;<code>kernel</code>&#x4E3A;<code>poly</code>&#x548C;<code>sigmoid</code>&#x7684;&#x65F6;&#x5019;&#x6709;&#x6548;</p>
 <p>&#x9009;&#x53D6;&#x4E0E;&#x6838;&#x51FD;&#x6570;&#x76F8;&#x5173;&#x7684;&#x53C2;&#x6570;&#xFF1A;<code>degree</code> &amp; <code>gamma</code> &amp; <code>coef0</code></p>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231175812.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231175812.png" data-lightbox="abb4a25f-0105-4807-bea9-ad1b15151fa7" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231175812.png" alt="undefined"></a>
 </center>
 
 
@@ -834,7 +820,7 @@
 </li>
 </ul>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231232459.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231232459.png" data-lightbox="d91967c1-ee40-4434-9da1-c2cc0430019c" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231232459.png" alt="undefined"></a>
 </center>
 
 
@@ -845,7 +831,7 @@
 <p><code>clf = SVC(kernel = &quot;linear&quot;)</code></p>
 <p><strong>&#x91CD;&#x8981;&#x5C5E;&#x6027;</strong>  :</p>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231180747.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231180747.png" data-lightbox="be91fa38-3b37-423e-8adc-0b12367a5a41" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231180747.png" alt="undefined"></a>
 </center>
 
 
@@ -855,7 +841,7 @@
 <p><br></p>
 <p><strong>SVC&#x7684;&#x63A5;&#x53E3;&#x5217;&#x8868;  &#xFF1A;</strong></p>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231180856.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231180856.png" data-lightbox="8211c236-a2c0-45cf-919c-d62a73fb0436" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20191231180856.png" alt="undefined"></a>
 </center>
 
 <p><br></p>
@@ -906,7 +892,7 @@ clf_proba<span class="token punctuation">.</span>decision_function<span class="t
 <h2 id="&#x91CD;&#x8981;&#x6982;&#x5FF5;"><a name="&#x91CD;&#x8981;&#x6982;&#x5FF5;" class="anchor-navigation-ex-anchor" href="#&#x91CD;&#x8981;&#x6982;&#x5FF5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x91CD;&#x8981;&#x6982;&#x5FF5;</h2>
 <p><strong>&#x51B3;&#x7B56;&#x8FB9;&#x754C;</strong>&#x662F;&#x6BD4;&#x6240;&#x5728;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x5C0F;&#x4E00;&#x7EF4;&#x7684;&#x7A7A;&#x95F4;&#xFF0C;&#x5728;&#x4E09;&#x7EF4;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x4E2D;&#x5C31;&#x662F;&#x4E00;&#x4E2A;&#x5E73;&#x9762;&#xFF0C;&#x5728;&#x4E8C;&#x7EF4;&#x6570;&#x636E;&#x7A7A;&#x95F4;&#x4E2D;&#x5C31;&#x662F;&#x4E00;&#x6761;&#x76F4;&#x7EBF; </p>
 <footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-23 15:57
+2020-05-23 
 </span></footer>
                                 
                                 </section>
@@ -950,13 +936,12 @@ clf_proba<span class="token punctuation">.</span>decision_function<span class="t
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"支持向量机","level":"1.2.6","depth":2,"next":{"title":"朴素贝叶斯","level":"1.2.7","depth":2,"path":"Chapter1/朴素贝叶斯.md","ref":"Chapter1/朴素贝叶斯.md","articles":[]},"previous":{"title":"聚类算法K-Means","level":"1.2.5","depth":2,"path":"Chapter1/聚类算法K-Means.md","ref":"Chapter1/聚类算法K-Means.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","local-video@^1.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","hide-element","code","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD HH:mm"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":5,"skipFirstH1":true},"todo":{},"splitter":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","tocLevel4Icon":"fa fa-hand-o-right","tocLevel5Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"local-video":{},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"HG1227","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"Chapter1/支持向量机.md","mtime":"2020-05-23T07:57:11.254Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T03:53:02.006Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"支持向量机","level":"1.2.6","depth":2,"next":{"title":"朴素贝叶斯","level":"1.2.7","depth":2,"path":"Chapter1/朴素贝叶斯.md","ref":"Chapter1/朴素贝叶斯.md","articles":[]},"previous":{"title":"聚类算法K-Means","level":"1.2.5","depth":2,"path":"Chapter1/聚类算法K-Means.md","ref":"Chapter1/聚类算法K-Means.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter1/支持向量机.md","mtime":"2020-05-23T07:57:11.254Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T14:06:12.662Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -989,11 +974,7 @@ clf_proba<span class="token punctuation">.</span>decision_function<span class="t
         
     
         
-        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
@@ -1005,7 +986,11 @@ clf_proba<span class="token punctuation">.</span>decision_function<span class="t
         
     
         
-        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
@@ -1020,8 +1005,6 @@ clf_proba<span class="token punctuation">.</span>decision_function<span class="t
         <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
-
-    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

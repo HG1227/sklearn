@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>决策树 · GitBook 使用教程</title>
+        <title>决策树 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="HG1227">
+        <meta name="author" content="HHG">
         
         
-    
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
@@ -26,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -50,11 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
@@ -66,11 +61,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -101,11 +100,7 @@
         
     
 
-
-    
-
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -120,15 +115,6 @@
     
     
     <link rel="prev" href="./" />
-    
-
-    
-        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
-    
-    
-        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
-    
-    
     
 
     </head>
@@ -963,7 +949,8 @@ fraction_leaf</code>&#xFF09;&#x5C06;&#x6BD4;&#x4E0D;&#x77E5;&#x9053;&#x6837;&#x6
 <p>&#x5C5E;&#x6027;&#x4E2D;&#x6700;&#x91CD;&#x8981;&#x7684;&#x4F9D;&#x7136;&#x662F;feature<em>importances</em>&#xFF0C;&#x63A5;&#x53E3;&#x4F9D;&#x7136;&#x662F;apply, fit, predict, score&#x6700;&#x6838;&#x5FC3;&#x3002;</p>
 <p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mi>S</mi><mi>E</mi><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>N</mi></mrow></mfrac><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>N</mi></mrow></msubsup><msup><mrow><mo fence="true">(</mo><msub><mi>f</mi><mrow><mi>i</mi></mrow></msub><mo>&#x2212;</mo><msub><mi>y</mi><mrow><mi>i</mi></mrow></msub><mo fence="true">)</mo></mrow><mrow><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">
 
-M S E=\frac{1}{N} \sum_{i=1}^{N}\left(f_{i}-y_{i}\right)^{2}
+M S E=\frac{1}{N} \sum_{i=1}^{N}\left(f_{i}-y_{i}\right)^{2}
+
 </annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.845108em;"></span><span class="strut bottom" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit" style="margin-right:0.05764em;">S</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mrel">=</span><span class="mord reset-textstyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.345em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.394em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mop"><span class="mop op-symbol small-op" style="top:-0.0000050000000000050004em;">&#x2211;</span><span class="msupsub"><span class="vlist"><span style="top:0.30001em;margin-left:0em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="minner"><span class="minner textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.10764em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="msupsub"><span class="vlist"><span style="top:-0.364em;margin-right:0.05em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathrm mtight">2</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span></span></span></span></p>
 <p>&#x5176;&#x4E2D;N&#x662F;&#x6837;&#x672C;&#x6570;&#x91CF;&#xFF0C;i&#x662F;&#x6BCF;&#x4E00;&#x4E2A;&#x6570;&#x636E;&#x6837;&#x672C;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>f</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">fi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.69444em;"></span><span class="strut bottom" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.10764em;">f</span><span class="mord mathit">i</span></span></span></span> &#x662F;&#x6A21;&#x578B;&#x56DE;&#x5F52;&#x51FA;&#x7684;&#x6570;&#x503C;&#xFF0C;<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mi>i</mi></mrow><annotation encoding="application/x-tex">yi</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.65952em;"></span><span class="strut bottom" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="mord mathit">i</span></span></span></span> &#x662F;&#x6837;&#x672C;&#x70B9;i&#x5B9E;&#x9645;&#x7684;&#x6570;&#x503C;&#x6807;&#x7B7E;&#x3002;&#x6240;&#x4EE5;MSE&#x7684;&#x672C;&#x8D28;&#xFF0C;&#x5176;&#x5B9E;&#x662F;&#x6837;&#x672C;&#x771F;&#x5B9E;&#x6570;&#x636E;&#x4E0E;&#x56DE;&#x5F52;&#x7ED3;&#x679C;&#x7684;&#x5DEE;&#x5F02;&#x3002;&#x5728;&#x56DE;&#x5F52;&#x6811;&#x4E2D;&#xFF0C;MSE&#x4E0D;&#x53EA;&#x662F;&#x6211;&#x4EEC;&#x7684;&#x5206;&#x679D;&#x8D28;&#x91CF;&#x8861;&#x91CF;&#x6307;&#x6807;&#xFF0C;&#x4E5F;&#x662F;&#x6211;&#x4EEC;&#x6700;&#x5E38;&#x7528;&#x7684;&#x8861;&#x91CF;&#x56DE;&#x5F52;&#x6811;&#x56DE;&#x5F52;&#x8D28;&#x91CF;&#x7684;&#x6307;&#x6807;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x5728;&#x4F7F;&#x7528;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#xFF0C;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;&#x83B7;&#x53D6;&#x56DE;&#x5F52;&#x6811;&#x7684;&#x7ED3;&#x679C;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x5F80;&#x5F80;&#x9009;&#x62E9;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x4F5C;&#x4E3A;&#x6211;&#x4EEC;&#x7684;&#x8BC4;&#x4F30;&#xFF08;&#x5728;&#x5206;&#x7C7B;&#x6811;&#x4E2D;&#x8FD9;&#x4E2A;&#x6307;&#x6807;&#x662F;score&#x4EE3;&#x8868;&#x7684;&#x9884;&#x6D4B;&#x51C6;&#x786E;&#x7387;&#xFF09;&#x3002;&#x5728;&#x56DE;&#x5F52;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8FFD;&#x6C42;&#x7684;&#x662F;&#xFF0C;MSE&#x8D8A;&#x5C0F;&#x8D8A;&#x597D;&#x3002;  </p>
 <p>&#x7136;&#x800C;&#xFF0C;<strong>&#x56DE;&#x5F52;&#x6811;&#x7684;&#x63A5;&#x53E3;score&#x8FD4;&#x56DE;&#x7684;&#x662F;R&#x5E73;&#x65B9;&#xFF0C;&#x5E76;&#x4E0D;&#x662F;MSE</strong>&#x3002;R&#x5E73;&#x65B9;&#x88AB;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;  </p>
@@ -1008,24 +995,24 @@ sklearn &#x4E2D;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x6A21;&#x5757;&#x4E0D;&#x652F;
 <h1 id="&#x9644;&#x5F55;"><a name="&#x9644;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x9644;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9644;&#x5F55;</h1>
 <h2 id="&#x5206;&#x7C7B;&#x6811;&#x53C2;&#x6570;&#x5217;&#x8868;"><a name="&#x5206;&#x7C7B;&#x6811;&#x53C2;&#x6570;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7C7B;&#x6811;&#x53C2;&#x6570;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x7C7B;&#x6811;&#x53C2;&#x6570;&#x5217;&#x8868;</h2>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113104912.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113104912.png" data-lightbox="733c0671-63a9-4535-97a0-2c7f0d5d97ec" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113104912.png" alt="undefined"></a>
 </center>
 
 
 
 <h2 id="&#x5206;&#x7C7B;&#x6811;&#x5C5E;&#x6027;&#x5217;&#x8868;"><a name="&#x5206;&#x7C7B;&#x6811;&#x5C5E;&#x6027;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7C7B;&#x6811;&#x5C5E;&#x6027;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x7C7B;&#x6811;&#x5C5E;&#x6027;&#x5217;&#x8868;</h2>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113105315.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113105315.png" data-lightbox="7005bd23-6252-4a1a-8e54-e8dfae3283c5" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113105315.png" alt="undefined"></a>
 </center>
 
 <h2 id="&#x5206;&#x7C7B;&#x6811;&#x63A5;&#x53E3;&#x5217;&#x8868;"><a name="&#x5206;&#x7C7B;&#x6811;&#x63A5;&#x53E3;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#&#x5206;&#x7C7B;&#x6811;&#x63A5;&#x53E3;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x5206;&#x7C7B;&#x6811;&#x63A5;&#x53E3;&#x5217;&#x8868;</h2>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113105406.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113105406.png" data-lightbox="91aafa83-f189-4752-821f-c25d84d15852" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113105406.png" alt="undefined"></a>
 </center>
 
 
 <footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-23 15:57
+2020-05-23 
 </span></footer>
                                 
                                 </section>
@@ -1069,13 +1056,12 @@ sklearn &#x4E2D;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x6A21;&#x5757;&#x4E0D;&#x652F;
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"决策树","level":"1.2.1","depth":2,"next":{"title":"随机森林","level":"1.2.2","depth":2,"path":"Chapter1/随机森林.md","ref":"Chapter1/随机森林.md","articles":[]},"previous":{"title":"常用模型","level":"1.2","depth":1,"path":"Chapter1/README.md","ref":"Chapter1/README.md","articles":[{"title":"决策树","level":"1.2.1","depth":2,"path":"Chapter1/决策树.md","ref":"Chapter1/决策树.md","articles":[]},{"title":"随机森林","level":"1.2.2","depth":2,"path":"Chapter1/随机森林.md","ref":"Chapter1/随机森林.md","articles":[]},{"title":"主成分分析PCA","level":"1.2.3","depth":2,"path":"Chapter1/主成分分析PCA.md","ref":"Chapter1/主成分分析PCA.md","articles":[]},{"title":"逻辑回归","level":"1.2.4","depth":2,"path":"Chapter1/逻辑回归.md","ref":"Chapter1/逻辑回归.md","articles":[]},{"title":"聚类算法K-Means","level":"1.2.5","depth":2,"path":"Chapter1/聚类算法K-Means.md","ref":"Chapter1/聚类算法K-Means.md","articles":[]},{"title":"支持向量机","level":"1.2.6","depth":2,"path":"Chapter1/支持向量机.md","ref":"Chapter1/支持向量机.md","articles":[]},{"title":"朴素贝叶斯","level":"1.2.7","depth":2,"path":"Chapter1/朴素贝叶斯.md","ref":"Chapter1/朴素贝叶斯.md","articles":[]},{"title":"回归大家族","level":"1.2.8","depth":2,"path":"Chapter1/回归大家族.md","ref":"Chapter1/回归大家族.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","local-video@^1.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","hide-element","code","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD HH:mm"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":5,"skipFirstH1":true},"todo":{},"splitter":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","tocLevel4Icon":"fa fa-hand-o-right","tocLevel5Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"local-video":{},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"HG1227","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"Chapter1/决策树.md","mtime":"2020-05-23T07:57:11.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T03:53:02.006Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"决策树","level":"1.2.1","depth":2,"next":{"title":"随机森林","level":"1.2.2","depth":2,"path":"Chapter1/随机森林.md","ref":"Chapter1/随机森林.md","articles":[]},"previous":{"title":"常用模型","level":"1.2","depth":1,"path":"Chapter1/README.md","ref":"Chapter1/README.md","articles":[{"title":"决策树","level":"1.2.1","depth":2,"path":"Chapter1/决策树.md","ref":"Chapter1/决策树.md","articles":[]},{"title":"随机森林","level":"1.2.2","depth":2,"path":"Chapter1/随机森林.md","ref":"Chapter1/随机森林.md","articles":[]},{"title":"主成分分析PCA","level":"1.2.3","depth":2,"path":"Chapter1/主成分分析PCA.md","ref":"Chapter1/主成分分析PCA.md","articles":[]},{"title":"逻辑回归","level":"1.2.4","depth":2,"path":"Chapter1/逻辑回归.md","ref":"Chapter1/逻辑回归.md","articles":[]},{"title":"聚类算法K-Means","level":"1.2.5","depth":2,"path":"Chapter1/聚类算法K-Means.md","ref":"Chapter1/聚类算法K-Means.md","articles":[]},{"title":"支持向量机","level":"1.2.6","depth":2,"path":"Chapter1/支持向量机.md","ref":"Chapter1/支持向量机.md","articles":[]},{"title":"朴素贝叶斯","level":"1.2.7","depth":2,"path":"Chapter1/朴素贝叶斯.md","ref":"Chapter1/朴素贝叶斯.md","articles":[]},{"title":"回归大家族","level":"1.2.8","depth":2,"path":"Chapter1/回归大家族.md","ref":"Chapter1/回归大家族.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter1/决策树.md","mtime":"2020-05-23T07:57:11.251Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T14:06:12.662Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1108,11 +1094,7 @@ sklearn &#x4E2D;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x6A21;&#x5757;&#x4E0D;&#x652F;
         
     
         
-        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
@@ -1124,7 +1106,11 @@ sklearn &#x4E2D;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x6A21;&#x5757;&#x4E0D;&#x652F;
         
     
         
-        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
@@ -1139,8 +1125,6 @@ sklearn &#x4E2D;&#x7684;&#x51B3;&#x7B56;&#x6811;&#x6A21;&#x5757;&#x4E0D;&#x652F;
         <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
-
-    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>

@@ -4,14 +4,13 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>随机森林 · GitBook 使用教程</title>
+        <title>随机森林 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
-        <meta name="author" content="HG1227">
+        <meta name="author" content="HHG">
         
         
-    
     
     <link rel="stylesheet" href="../gitbook/style.css">
 
@@ -26,7 +25,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-base16-ateliersulphurpool.light.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-vs.css">
                 
             
                 
@@ -50,11 +49,7 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.css">
-                
-            
-                
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.css">
                 
             
                 
@@ -66,11 +61,15 @@
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-code/plugin.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-advanced-emoji/emoji-website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-lightbox/css/lightbox.min.css">
                 
             
                 
@@ -101,11 +100,7 @@
         
     
 
-
-    
-
         
-    
     
     
     <meta name="HandheldFriendly" content="true"/>
@@ -120,15 +115,6 @@
     
     
     <link rel="prev" href="决策树.html" />
-    
-
-    
-        <link rel="shortcut icon" href='../favicon.ico' type="image/x-icon">
-    
-    
-        <link rel="bookmark" href='../favicon.ico' type="image/x-icon">
-    
-    
     
 
     </head>
@@ -807,7 +793,7 @@
 <p>&#x591A;&#x4E2A;&#x6A21;&#x578B;&#x96C6;&#x6210;&#x6210;&#x4E3A;&#x7684;&#x6A21;&#x578B;&#x53EB;&#x505A;&#x96C6;&#x6210;&#x8BC4;&#x4F30;&#x5668;&#xFF08;ensemble estimator&#xFF09;&#xFF0C;&#x7EC4;&#x6210;&#x96C6;&#x6210;&#x8BC4;&#x4F30;&#x5668;&#x7684;&#x6BCF;&#x4E2A;&#x6A21;&#x578B;&#x90FD;&#x53EB;&#x505A;&#x57FA;&#x8BC4;&#x4F30;&#x5668;
 &#xFF08;base estimator&#xFF09;&#x3002;&#x901A;&#x5E38;&#x6765;&#x8BF4;&#xFF0C;&#x6709;&#x4E09;&#x7C7B;&#x96C6;&#x6210;&#x7B97;&#x6CD5;&#xFF1A;&#x88C5;&#x888B;&#x6CD5;&#xFF08;Bagging&#xFF09;&#xFF0C;&#x63D0;&#x5347;&#x6CD5;&#xFF08;Boosting&#xFF09;&#x548C;stacking  </p>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113113258.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113113258.png" data-lightbox="0af08d08-6895-4edb-8744-be92d2276a31" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113113258.png" alt="undefined"></a>
 </center>
 
 <p>&#x88C5;&#x888B;&#x6CD5;&#x7684;&#x6838;&#x5FC3;&#x601D;&#x60F3;&#x662F;&#x6784;&#x5EFA;&#x591A;&#x4E2A;&#x76F8;&#x4E92;&#x72EC;&#x7ACB;&#x7684;&#x8BC4;&#x4F30;&#x5668;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x5176;&#x9884;&#x6D4B;&#x8FDB;&#x884C;&#x5E73;&#x5747;&#x6216;&#x591A;&#x6570;&#x8868;&#x51B3;&#x539F;&#x5219;&#x6765;&#x51B3;&#x5B9A;&#x96C6;&#x6210;&#x8BC4;&#x4F30;&#x5668;&#x7684;&#x7ED3;
@@ -1017,30 +1003,30 @@ cross_val_score<span class="token punctuation">(</span>regressor<span class="tok
 <h1 id="&#x9644;&#x5F55;"><a name="&#x9644;&#x5F55;" class="anchor-navigation-ex-anchor" href="#&#x9644;&#x5F55;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x9644;&#x5F55;</h1>
 <h2 id="rfc&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;"><a name="rfc&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#rfc&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>RFC&#x7684;&#x53C2;&#x6570;&#x5217;&#x8868;</h2>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113131913.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113131913.png" data-lightbox="72ba89ba-b34b-4adc-8422-a1aeb241dd0c" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113131913.png" alt="undefined"></a>
 </center>
 
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113131948.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113131948.png" data-lightbox="973a75ac-8347-46fa-b3d4-51f390b30788" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113131948.png" alt="undefined"></a>
 </center>
 
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132021.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132021.png" data-lightbox="d01778f6-98f7-4399-abf0-c31c428dfb73" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132021.png" alt="undefined"></a>
 </center>
 
 <h2 id="rfc&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;"><a name="rfc&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#rfc&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>RFC&#x7684;&#x5C5E;&#x6027;&#x5217;&#x8868;</h2>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132328.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132328.png" data-lightbox="53fa6138-1fec-41d2-984f-3ccedeea766f" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132328.png" alt="undefined"></a>
 </center>
 
 <h2 id="rfc&#x7684;&#x63A5;&#x53E3;&#x5217;&#x8868;"><a name="rfc&#x7684;&#x63A5;&#x53E3;&#x5217;&#x8868;" class="anchor-navigation-ex-anchor" href="#rfc&#x7684;&#x63A5;&#x53E3;&#x5217;&#x8868;"><i class="fa fa-link" aria-hidden="true"></i></a>RFC&#x7684;&#x63A5;&#x53E3;&#x5217;&#x8868;</h2>
 <center>
-    <img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132447.png">
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132447.png" data-lightbox="ab234153-2470-490f-b924-57e93316c416" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113132447.png" alt="undefined"></a>
 </center>
 
 
 <footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-23 15:57
+2020-05-23 
 </span></footer>
                                 
                                 </section>
@@ -1084,13 +1070,12 @@ cross_val_score<span class="token punctuation">(</span>regressor<span class="tok
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"随机森林","level":"1.2.2","depth":2,"next":{"title":"主成分分析PCA","level":"1.2.3","depth":2,"path":"Chapter1/主成分分析PCA.md","ref":"Chapter1/主成分分析PCA.md","articles":[]},"previous":{"title":"决策树","level":"1.2.1","depth":2,"path":"Chapter1/决策树.md","ref":"Chapter1/决策树.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex","splitter@^0.0.8","mermaid-gb3@2.1.0","expandable-chapters-small@^0.1.7","local-video@^1.0.1","anchor-navigation-ex@0.1.8","favicon@^0.0.2","todo@^0.1.3","hide-element","code","tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD HH:mm"},"prism":{"css":["prism-themes/themes/prism-base16-ateliersulphurpool.light.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":5,"skipFirstH1":true},"todo":{},"splitter":{},"code":{"copyButtons":true},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"mermaid-gb3":{},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","tocLevel4Icon":"fa fa-hand-o-right","tocLevel5Icon":"fa fa-hand-o-right"},"favicon":{"shortcut":"favicon.ico","bookmark":"favicon.ico"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"local-video":{},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"search-plus":{}},"theme":"default","author":"HG1227","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"GitBook 使用教程","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"记录 GitBook 的配置和一些插件的使用"},"file":{"path":"Chapter1/随机森林.md","mtime":"2020-05-23T07:57:11.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-05-26T03:53:02.006Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"随机森林","level":"1.2.2","depth":2,"next":{"title":"主成分分析PCA","level":"1.2.3","depth":2,"path":"Chapter1/主成分分析PCA.md","ref":"Chapter1/主成分分析PCA.md","articles":[]},"previous":{"title":"决策树","level":"1.2.1","depth":2,"path":"Chapter1/决策树.md","ref":"Chapter1/决策树.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter1/随机森林.md","mtime":"2020-05-23T07:57:11.258Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T14:06:12.662Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
 
         
-    
     <script src="../gitbook/gitbook.js"></script>
     <script src="../gitbook/theme.js"></script>
     
@@ -1123,11 +1108,7 @@ cross_val_score<span class="token punctuation">(</span>regressor<span class="tok
         
     
         
-        <script src="../gitbook/gitbook-plugin-mermaid-gb3/book/plugin.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters/expandable-chapters.js"></script>
         
     
         
@@ -1139,7 +1120,11 @@ cross_val_score<span class="token punctuation">(</span>regressor<span class="tok
         
     
         
-        <script src="../gitbook/gitbook-plugin-code/plugin.js"></script>
+        <script src="../gitbook/gitbook-plugin-copy-code-button/toggle.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lightbox/js/lightbox.min.js"></script>
         
     
         
@@ -1154,8 +1139,6 @@ cross_val_score<span class="token punctuation">(</span>regressor<span class="tok
         <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
-
-    <script src="../gitbook/gitbook-plugin-mermaid-gb3/mermaid/mermaid.min.js"></script>
 
     </body>
 </html>
