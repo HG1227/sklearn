@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>交叉验证cross_val_score用法 · python 学习记录</title>
+        <title>数据集划分train_test_split · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -110,6 +110,8 @@
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
+    
+    <link rel="next" href="随机排列交叉验证器ShuffleSplit.html" />
     
     
     <link rel="prev" href="./" />
@@ -714,12 +716,122 @@
             <ul class="articles">
                 
     
-        <li class="chapter active" data-level="1.7.1" data-path="交叉验证cross_val_score用法.html">
+        <li class="chapter active" data-level="1.7.1" data-path="数据集划分train_test_split.html">
             
-                <a href="交叉验证cross_val_score用法.html">
+                <a href="数据集划分train_test_split.html">
             
                     
-                    交叉验证cross_val_score用法
+                    数据集划分train_test_split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="随机排列交叉验证器ShuffleSplit.html">
+            
+                <a href="随机排列交叉验证器ShuffleSplit.html">
+            
+                    
+                    随机排列交叉验证器ShuffleSplit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="交叉验证cross_val_score.html">
+            
+                <a href="交叉验证cross_val_score.html">
+            
+                    
+                    交叉验证cross_val_score
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="分层交叉验证StratifiedKFold.html">
+            
+                <a href="分层交叉验证StratifiedKFold.html">
+            
+                    
+                    分层交叉验证StratifiedKFold
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="学习曲线learning_curve.html">
+            
+                <a href="学习曲线learning_curve.html">
+            
+                    
+                    学习曲线learning_curve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="验证曲线validation_curve.html">
+            
+                <a href="验证曲线validation_curve.html">
+            
+                    
+                    验证曲线validation_curve
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="../pipeline/">
+            
+                <a href="../pipeline/">
+            
+                    
+                    pipeline
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="../pipeline/Pipeline.html">
+            
+                <a href="../pipeline/Pipeline.html">
+            
+                    
+                    Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.2" data-path="../pipeline/make_pipeline.html">
+            
+                <a href="../pipeline/make_pipeline.html">
+            
+                    
+                    make_pipeline
             
                 </a>
             
@@ -762,7 +874,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >交叉验证cross_val_score用法</a>
+        <a href=".." >数据集划分train_test_split</a>
     </h1>
 </div>
 
@@ -777,50 +889,39 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;crossvalscore&#x7528;&#x6CD5;">&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;cross_val_score&#x7528;&#x6CD5;</a></li></ul></div><a href="#&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;crossvalscore&#x7528;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;crossvalscore&#x7528;&#x6CD5;"><a name="&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;crossvalscore&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;crossvalscore&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;cross_val_score&#x7528;&#x6CD5;</h1>
-<p><strong>&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x4F18;&#x70B9;&#xFF1A;</strong></p>
-<ol>
-<li>&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x7528;&#x4E8E;&#x8BC4;&#x4F30;&#x6A21;&#x578B;&#x7684;&#x9884;&#x6D4B;&#x6027;&#x80FD;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x8BAD;&#x7EC3;&#x597D;&#x7684;&#x6A21;&#x578B;&#x5728;&#x65B0;&#x6570;&#x636E;&#x4E0A;&#x7684;&#x8868;&#x73B0;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x4E00;&#x5B9A;&#x7A0B;&#x5EA6;&#x4E0A;&#x51CF;&#x5C0F;&#x8FC7;&#x62DF;&#x5408;&#x3002;</li>
-<li>&#x8FD8;&#x53EF;&#x4EE5;&#x4ECE;&#x6709;&#x9650;&#x7684;&#x6570;&#x636E;&#x4E2D;&#x83B7;&#x53D6;&#x5C3D;&#x53EF;&#x80FD;&#x591A;&#x7684;&#x6709;&#x6548;&#x4FE1;&#x606F;</li>
-</ol>
-<pre class="language-"><code class="lang-python">model_selection<span class="token punctuation">.</span>cross_val_score<span class="token punctuation">(</span>estimator<span class="token punctuation">,</span> 
-                                X<span class="token punctuation">,</span> y<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                groups<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                scoring<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                cv<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                n_jobs<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                verbose<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">,</span> 
-                                fit_params<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                pre_dispatch<span class="token operator">=</span><span class="token string">&apos;2*n_jobs&apos;</span><span class="token punctuation">,</span>
-                                error_score<span class="token operator">=</span>nan
-                               <span class="token punctuation">)</span>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;traintestsplit">&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;train_test_split</a></li><li><a href="#&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</a></li></ul></div><a href="#&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;traintestsplit" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;traintestsplit"><a name="&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;traintestsplit" class="anchor-navigation-ex-anchor" href="#&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;traintestsplit"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6570;&#x636E;&#x96C6;&#x5212;&#x5206;train_test_split</h1>
+<p><code>train_test_split</code> &#x662F;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x4E2D;&#x5E38;&#x7528;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x529F;&#x80FD;&#x662F;&#x4ECE;&#x6837;&#x672C;&#x4E2D;&#x968F;&#x673A;&#x7684;&#x6309;&#x6BD4;&#x4F8B;&#x9009;&#x53D6;<code>train_data</code>&#x548C;<code>test_data</code>&#xFF0C;&#x5F62;&#x5F0F;&#x4E3A;&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">sklearn<span class="token punctuation">.</span>model_selection<span class="token punctuation">.</span>train_test_split<span class="token punctuation">(</span>train_data<span class="token punctuation">,</span>
+                                         train_target<span class="token punctuation">,</span>
+                                         test_siz<span class="token operator">=</span><span class="token punctuation">,</span> 
+                                         random_state<span class="token operator">=</span><span class="token punctuation">,</span>
+                                         shuffle<span class="token punctuation">)</span>
 </code></pre>
-<p>&#x53C2;&#x6570;&#xFF1A;</p>
-<p>estimator: &#x4F30;&#x8BA1;&#x65B9;&#x6CD5;&#x5BF9;&#x8C61;(&#x5206;&#x7C7B;&#x5668;, &#x5EFA;&#x7ACB;&#x597D;&#x7684;&#x6A21;&#x578B;)</p>
-<p> X&#xFF1A;&#x6570;&#x636E;&#x7279;&#x5F81;(Features)</p>
-<p> y&#xFF1A;&#x6570;&#x636E;&#x6807;&#x7B7E;(Labels) </p>
-<p>soring&#xFF1A;&#x8C03;&#x7528;&#x65B9;&#x6CD5;(&#x5305;&#x62EC;accuracy&#x548C;mean_squared_error&#x7B49;&#x7B49;) </p>
-<p>cv&#xFF1A;&#x51E0;&#x6298;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1; </p>
-<p>n_jobs&#xFF1A;&#x540C;&#x65F6;&#x5DE5;&#x4F5C;&#x7684;cpu&#x4E2A;&#x6570;&#xFF08;-1&#x4EE3;&#x8868;&#x5168;&#x90E8;&#xFF09; </p>
-<p>fit_params&#xFF1A;&#x5B57;&#x5178;&#xFF0C;&#x5C06;&#x4F30;&#x8BA1;&#x5668;&#x4E2D;fit&#x65B9;&#x6CD5;&#x7684;&#x53C2;&#x6570;&#x901A;&#x8FC7;&#x5B57;&#x5178;&#x4F20;</p>
-<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;&#x6BCF;&#x6B21;&#x8FDB;&#x884C;&#x9A8C;&#x8BC1;&#x7684;&#x5206;&#x6570;&#x5217;&#x8868;</p>
-<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> sklearn <span class="token keyword">import</span> datasets<span class="token punctuation">,</span> linear_model
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> cross_val_score
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> diabetes <span class="token operator">=</span> datasets<span class="token punctuation">.</span>load_diabetes<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> X <span class="token operator">=</span> diabetes<span class="token punctuation">.</span>data<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">150</span><span class="token punctuation">]</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> y <span class="token operator">=</span> diabetes<span class="token punctuation">.</span>target<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token number">150</span><span class="token punctuation">]</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> lasso <span class="token operator">=</span> linear_model<span class="token punctuation">.</span>Lasso<span class="token punctuation">(</span><span class="token punctuation">)</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">print</span><span class="token punctuation">(</span>cross_val_score<span class="token punctuation">(</span>lasso<span class="token punctuation">,</span> X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> cv<span class="token operator">=</span><span class="token number">3</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
-<span class="token punctuation">[</span><span class="token number">0.33150734</span> <span class="token number">0.08022311</span> <span class="token number">0.03531764</span><span class="token punctuation">]</span>
-</code></pre>
-<p><code>scoring</code>&#x53C2;&#x6570;&#x503C;&#x89E3;&#x6790;</p>
-<center>
-    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113170116.png" data-lightbox="bc2a828f-5ffb-4e3e-9326-f61ab1a49462" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200113170116.png" alt="undefined"></a>
-</center>
+<p>&#x53C2;&#x6570;</p>
+<ul>
+<li><code>train_data</code>&#xFF1A;&#x6240;&#x8981;&#x5212;&#x5206;&#x7684;&#x6837;&#x672C;&#x7279;&#x5F81;&#x96C6;</li>
+<li><code>train_target</code>&#xFF1A;&#x6240;&#x8981;&#x5212;&#x5206;&#x7684;&#x6837;&#x672C;&#x7ED3;&#x679C;</li>
+<li><code>test_size</code>&#xFF1A;&#x6837;&#x672C;&#x5360;&#x6BD4;&#xFF0C;&#x5982;&#x679C;&#x662F;&#x6574;&#x6570;&#x7684;&#x8BDD;&#x5C31;&#x662F;&#x6837;&#x672C;&#x7684;&#x6570;&#x91CF;</li>
+<li><code>random_state</code>&#xFF1A;&#x662F;&#x968F;&#x673A;&#x6570;&#x7684;&#x79CD;&#x5B50;&#x3002;</li>
+<li><code>shuffle</code> : bool, default=True</li>
+</ul>
+<p>&#x8FD4;&#x56DE;&#x503C; &#xFF1A;&#x5212;&#x5206;&#x540E;&#x7684;&#x6570;&#x636E;&#x96C6;</p>
+<p>&#x968F;&#x673A;&#x6570;&#x79CD;&#x5B50;&#xFF1A;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8BE5;&#x7EC4;&#x968F;&#x673A;&#x6570;&#x7684;&#x7F16;&#x53F7;&#xFF0C;&#x5728;&#x9700;&#x8981;&#x91CD;&#x590D;&#x8BD5;&#x9A8C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4FDD;&#x8BC1;&#x5F97;&#x5230;&#x4E00;&#x7EC4;&#x4E00;&#x6837;&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;&#x6BD4;&#x5982;&#x4F60;&#x6BCF;&#x6B21;&#x90FD;&#x586B;1&#xFF0C;&#x5176;&#x4ED6;&#x53C2;&#x6570;&#x4E00;&#x6837;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x4F60;&#x5F97;&#x5230;&#x7684;&#x968F;&#x673A;&#x6570;&#x7EC4;&#x662F;&#x4E00;&#x6837;&#x7684;&#x3002;&#x4F46;&#x586B;0&#x6216;&#x4E0D;&#x586B;&#xFF0C;&#x6BCF;&#x6B21;&#x90FD;&#x4F1A;&#x4E0D;&#x4E00;&#x6837;&#x3002;
+&#x968F;&#x673A;&#x6570;&#x7684;&#x4EA7;&#x751F;&#x53D6;&#x51B3;&#x4E8E;&#x79CD;&#x5B50;&#xFF0C;&#x968F;&#x673A;&#x6570;&#x548C;&#x79CD;&#x5B50;&#x4E4B;&#x95F4;&#x7684;&#x5173;&#x7CFB;&#x9075;&#x4ECE;&#x4EE5;&#x4E0B;&#x4E24;&#x4E2A;&#x89C4;&#x5219;&#xFF1A;
+&#x79CD;&#x5B50;&#x4E0D;&#x540C;&#xFF0C;&#x4EA7;&#x751F;&#x4E0D;&#x540C;&#x7684;&#x968F;&#x673A;&#x6570;&#xFF1B;&#x79CD;&#x5B50;&#x76F8;&#x540C;&#xFF0C;&#x5373;&#x4F7F;&#x5B9E;&#x4F8B;&#x4E0D;&#x540C;&#x4E5F;&#x4EA7;&#x751F;&#x76F8;&#x540C;&#x7684;&#x968F;&#x673A;&#x6570;&#x3002;</p>
+<h1 id="&#x6848;&#x4F8B;"><a name="&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h1>
+<pre class="language-"><code class="lang-python"><span class="token keyword">import</span> numpy <span class="token keyword">as</span> np
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
 
-<p>sklearn&#x4E2D;&#x7684;&#x53C2;&#x6570;scoring&#x4E0B;&#xFF0C;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x4F5C;&#x4E3A;&#x8BC4;&#x5224;&#x6807;&#x51C6;&#x65F6;&#xFF0C;&#x5374;&#x662F;&#x8BA1;&#x7B97;&#x201D;&#x8D1F;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x201C;&#xFF08;neg_mean_squared_error&#xFF09;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;sklearn&#x5728;&#x8BA1;&#x7B97;&#x6A21;&#x578B;&#x8BC4;&#x4F30;&#x6307;&#x6807;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x8003;&#x8651;&#x6307;&#x6807;&#x672C;&#x8EAB;&#x7684;&#x6027;&#x8D28;&#xFF0C;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x672C;&#x8EAB;&#x662F;&#x4E00;&#x79CD;&#x8BEF;&#x5DEE;&#xFF0C;&#x6240;&#x4EE5;&#x88AB;sklearn&#x5212;&#x5206;&#x4E3A;&#x6A21;&#x578B;&#x7684;&#x4E00;&#x79CD;&#x635F;&#x5931;(loss)&#x3002;&#x5728;sklearn&#x5F53;&#x4E2D;&#xFF0C;&#x6240;&#x6709;&#x7684;&#x635F;&#x5931;&#x90FD;&#x4F7F;&#x7528;&#x8D1F;&#x6570;&#x8868;&#x793A;&#xFF0C;&#x56E0;&#x6B64;&#x5747;&#x65B9;&#x8BEF;&#x5DEE;&#x4E5F;&#x88AB;&#x663E;&#x793A;&#x4E3A;&#x8D1F;&#x6570;&#x4E86;&#x3002;&#x771F;&#x6B63;&#x7684;&#x5747;&#x65B9;&#x8BEF;&#x5DEE; MSE &#x7684;&#x6570;&#x503C;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F; neg_mean_squared_error &#x53BB;&#x6389;&#x8D1F;&#x53F7;&#x7684;&#x6570;&#x5B57;&#x3002;</p>
+
+X <span class="token operator">=</span> np<span class="token punctuation">.</span>array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">4</span><span class="token punctuation">,</span> <span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">6</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token number">9</span><span class="token punctuation">]</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+y <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">3</span><span class="token punctuation">,</span> <span class="token number">4</span><span class="token punctuation">]</span>
+
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>
+    X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.33</span><span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">0</span><span class="token punctuation">)</span>
+</code></pre>
 <footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-23 
+2020-07-08 
 </span></footer>
                                 
                                 </section>
@@ -848,10 +949,14 @@
 
             
                 
-                <a href="./" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 模型选择 model_selection">
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 模型选择 model_selection">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
+                
+                <a href="随机排列交叉验证器ShuffleSplit.html" class="navigation navigation-next " aria-label="Next page: 随机排列交叉验证器ShuffleSplit">
+                    <i class="fa fa-angle-right"></i>
+                </a>
                 
             
         
@@ -860,7 +965,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"交叉验证cross_val_score用法","level":"1.7.1","depth":2,"previous":{"title":"模型选择 model_selection","level":"1.7","depth":1,"path":"Chapter6/README.md","ref":"Chapter6/README.md","articles":[{"title":"交叉验证cross_val_score用法","level":"1.7.1","depth":2,"path":"Chapter6/交叉验证cross_val_score用法.md","ref":"Chapter6/交叉验证cross_val_score用法.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter6/交叉验证cross_val_score用法.md","mtime":"2020-05-23T07:57:11.290Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T14:06:12.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"数据集划分train_test_split","level":"1.7.1","depth":2,"next":{"title":"随机排列交叉验证器ShuffleSplit","level":"1.7.2","depth":2,"path":"model_selection/随机排列交叉验证器ShuffleSplit.md","ref":"model_selection/随机排列交叉验证器ShuffleSplit.md","articles":[]},"previous":{"title":"模型选择 model_selection","level":"1.7","depth":1,"path":"model_selection/README.md","ref":"model_selection/README.md","articles":[{"title":"数据集划分train_test_split","level":"1.7.1","depth":2,"path":"model_selection/数据集划分train_test_split.md","ref":"model_selection/数据集划分train_test_split.md","articles":[]},{"title":"随机排列交叉验证器ShuffleSplit","level":"1.7.2","depth":2,"path":"model_selection/随机排列交叉验证器ShuffleSplit.md","ref":"model_selection/随机排列交叉验证器ShuffleSplit.md","articles":[]},{"title":"交叉验证cross_val_score","level":"1.7.3","depth":2,"path":"model_selection/交叉验证cross_val_score.md","ref":"model_selection/交叉验证cross_val_score.md","articles":[]},{"title":"分层交叉验证StratifiedKFold","level":"1.7.4","depth":2,"path":"model_selection/分层交叉验证StratifiedKFold.md","ref":"model_selection/分层交叉验证StratifiedKFold.md","articles":[]},{"title":"学习曲线learning_curve","level":"1.7.5","depth":2,"path":"model_selection/学习曲线learning_curve.md","ref":"model_selection/学习曲线learning_curve.md","articles":[]},{"title":"验证曲线validation_curve","level":"1.7.6","depth":2,"path":"model_selection/验证曲线validation_curve.md","ref":"model_selection/验证曲线validation_curve.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"model_selection/数据集划分train_test_split.md","mtime":"2020-07-08T11:56:33.943Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-08T14:54:31.280Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

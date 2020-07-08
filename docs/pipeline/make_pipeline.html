@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>模型选择 model_selection · python 学习记录</title>
+        <title>make_pipeline · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -111,10 +111,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="交叉验证cross_val_score用法.html" />
     
-    
-    <link rel="prev" href="../Chapter5/feature_selection.RFE用法.html" />
+    <link rel="prev" href="Pipeline.html" />
     
 
     </head>
@@ -702,9 +700,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.7" data-path="./">
+        <li class="chapter " data-level="1.7" data-path="../model_selection/">
             
-                <a href="./">
+                <a href="../model_selection/">
             
                     
                     模型选择 model_selection
@@ -716,12 +714,122 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.7.1" data-path="交叉验证cross_val_score用法.html">
+        <li class="chapter " data-level="1.7.1" data-path="../model_selection/数据集划分train_test_split.html">
             
-                <a href="交叉验证cross_val_score用法.html">
+                <a href="../model_selection/数据集划分train_test_split.html">
             
                     
-                    交叉验证cross_val_score用法
+                    数据集划分train_test_split
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.2" data-path="../model_selection/随机排列交叉验证器ShuffleSplit.html">
+            
+                <a href="../model_selection/随机排列交叉验证器ShuffleSplit.html">
+            
+                    
+                    随机排列交叉验证器ShuffleSplit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.3" data-path="../model_selection/交叉验证cross_val_score.html">
+            
+                <a href="../model_selection/交叉验证cross_val_score.html">
+            
+                    
+                    交叉验证cross_val_score
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../model_selection/分层交叉验证StratifiedKFold.html">
+            
+                <a href="../model_selection/分层交叉验证StratifiedKFold.html">
+            
+                    
+                    分层交叉验证StratifiedKFold
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../model_selection/学习曲线learning_curve.html">
+            
+                <a href="../model_selection/学习曲线learning_curve.html">
+            
+                    
+                    学习曲线learning_curve
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../model_selection/验证曲线validation_curve.html">
+            
+                <a href="../model_selection/验证曲线validation_curve.html">
+            
+                    
+                    验证曲线validation_curve
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    pipeline
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.8.1" data-path="Pipeline.html">
+            
+                <a href="Pipeline.html">
+            
+                    
+                    Pipeline
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.8.2" data-path="make_pipeline.html">
+            
+                <a href="make_pipeline.html">
+            
+                    
+                    make_pipeline
             
                 </a>
             
@@ -764,7 +872,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >模型选择 model_selection</a>
+        <a href=".." >make_pipeline</a>
     </h1>
 </div>
 
@@ -779,9 +887,59 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#&#x6A21;&#x578B;&#x9009;&#x62E9;-modelselection">&#x6A21;&#x578B;&#x9009;&#x62E9; model_selection</a></li></ul></div><a href="#&#x6A21;&#x578B;&#x9009;&#x62E9;-modelselection" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="&#x6A21;&#x578B;&#x9009;&#x62E9;-modelselection"><a name="&#x6A21;&#x578B;&#x9009;&#x62E9;-modelselection" class="anchor-navigation-ex-anchor" href="#&#x6A21;&#x578B;&#x9009;&#x62E9;-modelselection"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6A21;&#x578B;&#x9009;&#x62E9; model_selection</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#makepipeline">make_pipeline</a></li><li><a href="#&#x6848;&#x4F8B;">&#x6848;&#x4F8B;</a></li><li><a href="#&#x53C2;&#x8003;">&#x53C2;&#x8003;</a></li></ul></div><a href="#makepipeline" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="makepipeline"><a name="makepipeline" class="anchor-navigation-ex-anchor" href="#makepipeline"><i class="fa fa-link" aria-hidden="true"></i></a>make_pipeline</h1>
+<p>&#x7528; <code>Pipeline</code>&#x7C7B;&#x6784;&#x5EFA;&#x7BA1;&#x9053;&#x65F6;&#x8BED;&#x6CD5;&#x6709;&#x70B9;&#x9EBB;&#x70E6;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4E0D;&#x9700;&#x8981;&#x4E3A;&#x6BCF;&#x4E00;&#x4E2A;&#x6B65;&#x9AA4;&#x63D0;&#x4F9B;&#x7528;&#x6237;&#x6307;&#x5B9A;&#x7684;&#x540D;&#x79F0;&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x7528;<code>make_pipeline</code> &#x51FD;&#x6570;&#x521B;&#x5EFA;&#x7BA1;&#x9053;&#xFF0C;&#x5B83;&#x53EF;&#x4EE5;&#x4E3A;&#x6211;&#x4EEC;&#x521B;&#x5EFA;&#x7BA1;&#x9053;&#x5E76;&#x6839;&#x636E;&#x6BCF;&#x4E2A;&#x6B65;&#x9AA4;&#x6240;&#x5C5E;&#x7684;&#x7C7B;&#x4E3A;&#x5176;&#x81EA;&#x52A8;&#x547D;&#x540D;&#x3002;</p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>pipeline <span class="token keyword">import</span> make_pipeline
+pipe <span class="token operator">=</span> make_pipeline<span class="token punctuation">(</span>MinMaxScaler<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span>SVC<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x4E00;&#x822C;&#x6765;&#x8BF4;&#xFF0C;&#x81EA;&#x52A8;&#x547D;&#x540D;&#x7684;&#x6B65;&#x9AA4;&#x540D;&#x79F0;&#x662F;&#x7C7B;&#x540D;&#x79F0;&#x7684;&#x5C0F;&#x5199;&#x7248;&#x672C;&#xFF0C;&#x5982;&#x679C;&#x591A;&#x4E2A;&#x6B65;&#x9AA4;&#x5C5E;&#x4E8E;&#x540C;&#x4E00;&#x4E2A;&#x7C7B;&#xFF0C;&#x5219;&#x4F1A;&#x9644;&#x52A0;&#x4E00;&#x4E2A;&#x6570;&#x5B57;&#x3002; </p>
+<h1 id="&#x6848;&#x4F8B;"><a name="&#x6848;&#x4F8B;" class="anchor-navigation-ex-anchor" href="#&#x6848;&#x4F8B;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6848;&#x4F8B;</h1>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x52A0;&#x8F7D;&#x6570;&#x636E;</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> LabelEncoder
+df <span class="token operator">=</span> pd<span class="token punctuation">.</span>read_csv<span class="token punctuation">(</span>
+    <span class="token string">&quot;http://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/wdbc.data&quot;</span><span class="token punctuation">,</span> header<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>
+<span class="token comment"># &#x505A;&#x57FA;&#x672C;&#x7684;&#x6570;&#x636E;&#x9884;&#x5904;&#x7406;</span>
+
+X <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">:</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+y <span class="token operator">=</span> df<span class="token punctuation">.</span>iloc<span class="token punctuation">[</span><span class="token punctuation">:</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">.</span>values
+le <span class="token operator">=</span> LabelEncoder<span class="token punctuation">(</span><span class="token punctuation">)</span>  <span class="token comment"># &#x5C06;M-B&#x7B49;&#x5B57;&#x7B26;&#x4E32;&#x7F16;&#x7801;&#x6210;&#x8BA1;&#x7B97;&#x673A;&#x80FD;&#x8BC6;&#x522B;&#x7684;0-1</span>
+y <span class="token operator">=</span> le<span class="token punctuation">.</span>fit_transform<span class="token punctuation">(</span>y<span class="token punctuation">)</span>
+le<span class="token punctuation">.</span>transform<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token string">&apos;M&apos;</span><span class="token punctuation">,</span> <span class="token string">&apos;B&apos;</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+
+<span class="token comment"># &#x6570;&#x636E;&#x5207;&#x5206;8&#xFF1A;2</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>model_selection <span class="token keyword">import</span> train_test_split
+
+X_train<span class="token punctuation">,</span> X_test<span class="token punctuation">,</span> y_train<span class="token punctuation">,</span> y_test <span class="token operator">=</span> train_test_split<span class="token punctuation">(</span>
+    X<span class="token punctuation">,</span> y<span class="token punctuation">,</span> test_size<span class="token operator">=</span><span class="token number">0.2</span><span class="token punctuation">,</span> stratify<span class="token operator">=</span>y<span class="token punctuation">,</span> random_state<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+</code></pre>
+<pre class="language-"><code class="lang-python"><span class="token comment"># &#x628A;&#x6240;&#x6709;&#x7684;&#x64CD;&#x4F5C;&#x5168;&#x90E8;&#x5C01;&#x5728;&#x4E00;&#x4E2A;&#x7BA1;&#x9053;pipeline&#x5185;&#x5F62;&#x6210;&#x4E00;&#x4E2A;&#x5DE5;&#x4F5C;&#x6D41;&#xFF1A;</span>
+<span class="token comment"># &#x6807;&#x51C6;&#x5316;+PCA+&#x903B;&#x8F91;&#x56DE;&#x5F52;</span>
+
+<span class="token comment"># make_pipeline</span>
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>preprocessing <span class="token keyword">import</span> StandardScaler
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>decomposition <span class="token keyword">import</span> PCA
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>linear_model <span class="token keyword">import</span> LogisticRegression
+<span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>pipeline <span class="token keyword">import</span> make_pipeline
+
+pipe_lr1 <span class="token operator">=</span> make_pipeline<span class="token punctuation">(</span>StandardScaler<span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                         PCA<span class="token punctuation">(</span> n_components<span class="token operator">=</span><span class="token number">2</span><span class="token punctuation">)</span><span class="token punctuation">,</span> 
+                         LogisticRegression<span class="token punctuation">(</span>random_state<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
+                        <span class="token punctuation">)</span>
+pipe_lr1<span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X_train<span class="token punctuation">,</span> y_train<span class="token punctuation">)</span>
+y_pred1 <span class="token operator">=</span> pipe_lr1<span class="token punctuation">.</span>predict<span class="token punctuation">(</span>X_test<span class="token punctuation">)</span>
+<span class="token keyword">print</span><span class="token punctuation">(</span><span class="token string">&quot;Test Accuracy: %.3f&quot;</span> <span class="token operator">%</span> pipe_lr1<span class="token punctuation">.</span>score<span class="token punctuation">(</span>X_test<span class="token punctuation">,</span> y_test<span class="token punctuation">)</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x7ED3;&#x679C;&#xFF1A;</p>
+<pre class="language-"><code>Test Accuracy: 0.956
+</code></pre><hr>
+<p><code>make_pipeline</code>  &#x540C;&#x6837;&#x53EF;&#x4EE5;&#x548C;&#x4EA4;&#x53C9;&#x9A8C;&#x8BC1;&#x7B49;&#x76F8;&#x7ED3;&#x5408; &#x3002;</p>
+<h1 id="&#x53C2;&#x8003;"><a name="&#x53C2;&#x8003;" class="anchor-navigation-ex-anchor" href="#&#x53C2;&#x8003;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x53C2;&#x8003;</h1>
+<ul>
+<li><a href="https://mp.weixin.qq.com/s/LV020zM9EPwABLDP04NSZA" target="_blank">Datawhale:&#x5E38;&#x7528;&#x6570;&#x636E;&#x5206;&#x6790;&#x65B9;&#x6CD5;&#xFF1A;&#x65B9;&#x5DEE;&#x5206;&#x6790;&#x53CA;&#x5B9E;&#x73B0;&#xFF01;</a>  </li>
+<li><a href="https://blog.csdn.net/elma_tww/article/details/88427695" target="_blank">&#x300A;Python&#x673A;&#x5668;&#x5B66;&#x4E60;&#x57FA;&#x7840;&#x6559;&#x7A0B;&#x300B;&#x6784;&#x5EFA;&#x7BA1;&#x9053;(make_pipeline)</a> </li>
+</ul>
 <footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-23 
+2020-07-08 
 </span></footer>
                                 
                                 </section>
@@ -809,14 +967,10 @@
 
             
                 
-                <a href="../Chapter5/feature_selection.RFE用法.html" class="navigation navigation-prev " aria-label="Previous page: feature_selection.RFE用法">
+                <a href="Pipeline.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: Pipeline">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="交叉验证cross_val_score用法.html" class="navigation navigation-next " aria-label="Next page: 交叉验证cross_val_score用法">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -825,7 +979,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"模型选择 model_selection","level":"1.7","depth":1,"next":{"title":"交叉验证cross_val_score用法","level":"1.7.1","depth":2,"path":"Chapter6/交叉验证cross_val_score用法.md","ref":"Chapter6/交叉验证cross_val_score用法.md","articles":[]},"previous":{"title":"feature_selection.RFE用法","level":"1.6.10","depth":2,"path":"Chapter5/feature_selection.RFE用法.md","ref":"Chapter5/feature_selection.RFE用法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter6/README.md","mtime":"2020-05-23T07:57:11.289Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-06-12T14:06:12.662Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"make_pipeline","level":"1.8.2","depth":2,"previous":{"title":"Pipeline","level":"1.8.1","depth":2,"path":"pipeline/Pipeline.md","ref":"pipeline/Pipeline.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"pipeline/make_pipeline.md","mtime":"2020-07-08T08:57:35.483Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-08T14:54:31.280Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
