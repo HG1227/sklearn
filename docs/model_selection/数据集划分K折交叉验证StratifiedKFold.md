@@ -1,6 +1,8 @@
-# 分层交叉验证StratifiedKFold
+# 数据集划分K折交叉验证StratifiedKFold
 
-`StratifiedKFold` 用法类似Kfold，但是它是分层采样，确保训练集，验证集中各类别样本的比例与原始数据集中相同。因此一般使用 `StratifiedKFold`。
+
+
+`StratifiedKFold` 用法类似Kfold，但是它是分层采样，确保训练集，验证集中各类别样本的比例与原始数据集中相同。因此一般使用 `StratifiedKFold`。保证训练集中每一类的比例是相同的
 
 <center><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200708175028.png" alt="sphx_glr_plot_cv_indices_007" style="zoom:67%;" /></center>
 
@@ -22,16 +24,17 @@ class sklearn.model_selection.StratifiedKFold(n_splits=5,
 
 
 
-**函数：**
+**Methods**
 
-```
-StratifiedKFold.split(X, y, groups=None)
-```
+- `get_n_splits`(*self*, *X=None*, *y=None*, *groups=None*)
+
+- `StratifiedKFold.split`(X, y, groups=None)
+
 
 参数：
 
 - `X` :array-like,shape(n_sample,n_features)，训练数据集。
--  `y`:array-like,shape(n_sample)，标签。
+- `y`:array-like,shape(n_sample)，标签。
 
  返回值：训练集数据的 index 与验证集数据的 index。
 

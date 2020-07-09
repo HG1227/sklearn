@@ -111,7 +111,7 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="sklearn.metrics.roc_auc_score用法.html" />
+    <link rel="next" href="ROC曲线下的面积auc.html" />
     
     
     <link rel="prev" href="sklearn.metrics.f1_score用法.html" />
@@ -406,7 +406,20 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.9" data-path="sklearn.metrics.roc_auc_score用法.html">
+        <li class="chapter " data-level="1.3.9" data-path="ROC曲线下的面积auc.html">
+            
+                <a href="ROC曲线下的面积auc.html">
+            
+                    
+                    ROC曲线下的面积auc
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.10" data-path="sklearn.metrics.roc_auc_score用法.html">
             
                 <a href="sklearn.metrics.roc_auc_score用法.html">
             
@@ -729,12 +742,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.2" data-path="../model_selection/随机排列交叉验证器ShuffleSplit.html">
+        <li class="chapter " data-level="1.7.2" data-path="../model_selection/数据集划分K折交叉验证KFold.html">
             
-                <a href="../model_selection/随机排列交叉验证器ShuffleSplit.html">
+                <a href="../model_selection/数据集划分K折交叉验证KFold.html">
             
                     
-                    随机排列交叉验证器ShuffleSplit
+                    数据集划分K折交叉验证KFold
             
                 </a>
             
@@ -742,7 +755,46 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.3" data-path="../model_selection/交叉验证cross_val_score.html">
+        <li class="chapter " data-level="1.7.3" data-path="../model_selection/数据集划分K折交叉验证StratifiedKFold.html">
+            
+                <a href="../model_selection/数据集划分K折交叉验证StratifiedKFold.html">
+            
+                    
+                    数据集划分K折交叉验证StratifiedKFold
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.4" data-path="../model_selection/随机数据集划分ShuffleSplit.html">
+            
+                <a href="../model_selection/随机数据集划分ShuffleSplit.html">
+            
+                    
+                    随机数据集划分ShuffleSplit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.5" data-path="../model_selection/随机分层数据集划分StratifiedShuffleSplit.html">
+            
+                <a href="../model_selection/随机分层数据集划分StratifiedShuffleSplit.html">
+            
+                    
+                    随机分层数据集划分StratifiedShuffleSplit
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.7.6" data-path="../model_selection/交叉验证cross_val_score.html">
             
                 <a href="../model_selection/交叉验证cross_val_score.html">
             
@@ -755,20 +807,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.4" data-path="../model_selection/分层交叉验证StratifiedKFold.html">
-            
-                <a href="../model_selection/分层交叉验证StratifiedKFold.html">
-            
-                    
-                    分层交叉验证StratifiedKFold
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.7.5" data-path="../model_selection/学习曲线learning_curve.html">
+        <li class="chapter " data-level="1.7.7" data-path="../model_selection/学习曲线learning_curve.html">
             
                 <a href="../model_selection/学习曲线learning_curve.html">
             
@@ -781,7 +820,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.7.6" data-path="../model_selection/验证曲线validation_curve.html">
+        <li class="chapter " data-level="1.7.8" data-path="../model_selection/验证曲线validation_curve.html">
             
                 <a href="../model_selection/验证曲线validation_curve.html">
             
@@ -889,7 +928,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#sklearnmetricsroccurve&#x7528;&#x6CD5;">sklearn.metrics.roc_curve&#x7528;&#x6CD5;</a></li></ul></div><a href="#sklearnmetricsroccurve&#x7528;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sklearnmetricsroccurve&#x7528;&#x6CD5;"><a name="sklearnmetricsroccurve&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#sklearnmetricsroccurve&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>sklearn.metrics.roc_curve&#x7528;&#x6CD5;</h1>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#sklearnmetricsroccurve&#x7528;&#x6CD5;">sklearn.metrics.roc_curve&#x7528;&#x6CD5;</a></li><ul><li><a href="#example-1">Example 1</a></li><li><a href="#example-2">Example 2</a></li></ul></ul></div><a href="#sklearnmetricsroccurve&#x7528;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sklearnmetricsroccurve&#x7528;&#x6CD5;"><a name="sklearnmetricsroccurve&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#sklearnmetricsroccurve&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>sklearn.metrics.roc_curve&#x7528;&#x6CD5;</h1>
 <p><strong>ROC &#x662F;&#x4E00;&#x6761;&#x4EE5;&#x4E0D;&#x540C;&#x9608;&#x503C;&#x4E0B;&#x7684;&#x5047;&#x6B63;&#x7387; FPR &#x4E3A;&#x6A2A;&#x5750;&#x6807;&#xFF0C;&#x4E0D;&#x540C;&#x9608;&#x503C;&#x4E0B;&#x7684;&#x53EC;&#x56DE;&#x7387; Recall &#x4E3A;&#x7EB5;&#x5750;&#x6807;&#x7684;&#x66F2;&#x7EBF;&#x3002;</strong>  </p>
 <p>&#x5EFA;&#x7ACB; ROC &#x66F2;&#x7EBF;&#x7684;&#x6839;&#x672C;&#x76EE;&#x7684;&#x662F;&#x627E;&#x5BFB; Recall &#x548C; FPR &#x4E4B;&#x95F4;&#x7684;&#x5E73;&#x8861;&#xFF0C;&#x8BA9;&#x6211;&#x4EEC;&#x80FD;&#x591F;&#x8861;&#x91CF;&#x6A21;&#x578B;&#x5728;&#x5C3D;&#x91CF;&#x6355;&#x6349;&#x5C11;&#x6570;&#x7C7B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x8BEF;&#x4F24;&#x591A;&#x6570;&#x7C7B;&#x7684;&#x60C5;&#x51B5;&#x4F1A;&#x5982;&#x4F55;&#x53D8;&#x5316;&#x3002;&#x6A2A;&#x5750;&#x6807;&#x662F;FPR&#xFF0C;&#x4EE3;&#x8868;&#x7740;&#x6A21;&#x578B;&#x5C06;&#x591A;&#x6570;&#x7C7B;&#x5224;&#x65AD;&#x9519;&#x8BEF;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x7EB5;&#x5750;&#x6807;Recall&#xFF0C;&#x4EE3;&#x8868;&#x7740;&#x6A21;&#x578B;&#x6355;&#x6349;&#x5C11;&#x6570;&#x7C7B;&#x7684;&#x80FD;&#x529B;&#xFF0C;&#x6240;&#x4EE5;ROC&#x66F2;&#x7EBF;&#x4EE3;&#x8868;&#x7740;&#xFF0C;&#x968F;&#x7740;Recall&#x7684;&#x4E0D;&#x65AD;&#x589E;&#x52A0;&#xFF0C;FPR&#x5982;&#x4F55;&#x589E;&#x52A0;&#x3002;&#x6211;&#x4EEC;&#x5E0C;&#x671B;&#x968F;&#x7740;Recall&#x7684;&#x4E0D;&#x65AD;&#x63D0;&#x5347;&#xFF0C;FPR&#x589E;&#x52A0;&#x5F97;&#x8D8A;&#x6162;&#x8D8A;&#x597D;&#xFF0C;&#x8FD9;&#x8BF4;&#x660E;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C3D;&#x91CF;&#x9AD8;&#x6548;&#x5730;&#x6355;&#x6349;&#x51FA;&#x5C11;&#x6570;&#x7C7B;&#xFF0C;&#x800C;&#x4E0D;&#x4F1A;&#x5C06;&#x5F88;&#x591A;&#x5730;&#x591A;&#x6570;&#x7C7B;&#x5224;&#x65AD;&#x9519;&#x8BEF;  </p>
 <pre class="language-"><code class="lang-python">sklearn<span class="token punctuation">.</span>metrics<span class="token punctuation">.</span>roc_curve <span class="token punctuation">(</span> y_true<span class="token punctuation">,</span> 
@@ -903,8 +942,7 @@
 <ul>
 <li><p><code>y_true</code> : &#x6570;&#x7EC4;&#xFF0C;&#x5F62;&#x72B6; = [n_samples]&#xFF0C;&#x771F;&#x5B9E;&#x6807;&#x7B7E;  </p>
 </li>
-<li><p><code>y_score</code> : &#x6570;&#x7EC4;&#xFF0C;&#x5F62;&#x72B6; = [n_samples]&#xFF0C;&#x7F6E;&#x4FE1;&#x5EA6;&#x5206;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x6B63;&#x7C7B;&#x6837;&#x672C;&#x7684;&#x6982;&#x7387;&#x503C;&#xFF0C;&#x6216;&#x7F6E;&#x4FE1;&#x5EA6;&#x5206;&#x6570;&#xFF0C;&#x6216;&#x8005;<code>SVC</code> &#x4E2D;
-<code>decision_function</code>&#x8FD4;&#x56DE;&#x7684;&#x8DDD;&#x79BB;  </p>
+<li><p><code>y_score</code> : &#x6570;&#x7EC4;&#xFF0C;&#x5F62;&#x72B6; = [n_samples]&#xFF0C;&#x7F6E;&#x4FE1;&#x5EA6;&#x5206;&#x6570;&#xFF0C;&#x53EF;&#x4EE5;&#x662F;&#x6B63;&#x7C7B;&#x6837;&#x672C;&#x7684;&#x6982;&#x7387;&#x503C;&#xFF0C;&#x6216;&#x7F6E;&#x4FE1;&#x5EA6;&#x5206;&#x6570;&#xFF0C;&#x6216;&#x8005;<code>SVC</code> &#x4E2D;<code>decision_function</code>&#x8FD4;&#x56DE;&#x7684;&#x8DDD;&#x79BB;  </p>
 </li>
 <li><p><code>pos_label</code> : &#x6574;&#x6570;&#x6216;&#x8005;&#x5B57;&#x7B26;&#x4E32;, &#x9ED8;&#x8BA4;None&#xFF0C;&#x8868;&#x793A;&#x88AB;&#x8BA4;&#x4E3A;&#x662F;&#x6B63;&#x7C7B;&#x6837;&#x672C;&#x7684;&#x7C7B;&#x522B;  .
 &#x5373;&#x6807;&#x7B7E;&#x4E2D;&#x8BA4;&#x5B9A;&#x4E3A;&#x6B63;&#x7684;label&#x4E2A;&#x6570;&#x3002;</p>
@@ -917,6 +955,7 @@
 </ul>
 <p><strong>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</strong></p>
 <p>FPR&#xFF0C;Recall&#x4EE5;&#x53CA;&#x9608;&#x503C;&#x3002;  </p>
+<h2 id="example-1"><a name="example-1" class="anchor-navigation-ex-anchor" href="#example-1"><i class="fa fa-link" aria-hidden="true"></i></a>Example 1</h2>
 <pre class="language-"><code class="lang-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>datasets <span class="token keyword">import</span> make_blobs
 <span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>svm <span class="token keyword">import</span> SVC
 <span class="token keyword">import</span> matplotlib<span class="token punctuation">.</span>pyplot <span class="token keyword">as</span> plt
@@ -937,7 +976,7 @@ plt<span class="token punctuation">.</span>scatter<span class="token punctuation
 <span class="token comment">#&#x5176;&#x4E2D;&#x7EA2;&#x8272;&#x70B9;&#x662F;&#x5C11;&#x6570;&#x7C7B;&#xFF0C;&#x7D2B;&#x8272;&#x70B9;&#x662F;&#x591A;&#x6570;&#x7C7B;</span>
 </code></pre>
 <center>
-    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114003.png" data-lightbox="ae46d851-476d-4248-a5c0-7b6b47bdb8cc" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114003.png" alt="undefined"></a>
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114003.png" data-lightbox="d3393944-e797-4fc4-b15f-dd307016d686" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114003.png" alt="undefined"></a>
 </center>
 
 <pre class="language-"><code class="lang-python">clf_proba <span class="token operator">=</span> SVC<span class="token punctuation">(</span>kernel<span class="token operator">=</span><span class="token string">&quot;linear&quot;</span><span class="token punctuation">,</span>C<span class="token operator">=</span><span class="token number">1.0</span><span class="token punctuation">,</span>probability<span class="token operator">=</span><span class="token boolean">True</span><span class="token punctuation">)</span><span class="token punctuation">.</span>fit<span class="token punctuation">(</span>X<span class="token punctuation">,</span>y<span class="token punctuation">)</span>
@@ -946,12 +985,36 @@ FPR<span class="token punctuation">,</span> recall<span class="token punctuation
 plt<span class="token punctuation">.</span>plot<span class="token punctuation">(</span>FPR<span class="token punctuation">,</span> recall<span class="token punctuation">,</span> color<span class="token operator">=</span><span class="token string">&apos;red&apos;</span><span class="token punctuation">,</span>label<span class="token operator">=</span><span class="token string">&apos;ROC curve (area = %0.2f)&apos;</span> <span class="token punctuation">)</span>
 </code></pre>
 <center>
-    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114149.png" data-lightbox="1c632102-8d7d-4982-aefe-ff728c260f4b" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114149.png" alt="undefined"></a>
+    <a href="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114149.png" data-lightbox="6a8da29e-be16-431d-aae0-bef0d86c03ea" data-title="undefined" target="_blank"><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200102114149.png" alt="undefined"></a>
 </center>
 
 
-<footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-23 
+<h2 id="example-2"><a name="example-2" class="anchor-navigation-ex-anchor" href="#example-2"><i class="fa fa-link" aria-hidden="true"></i></a>Example 2</h2>
+<p>&#x521D;&#x59CB;&#x6570;&#x636E;&#xFF1A;</p>
+<pre class="language-"><code>y_true = [0, 0, 1, 0, 0, 1, 0, 1, 0, 0]
+y_score = [0.31689620142873609, 0.32367439192936548, 0.42600526758001989, 0.38769987193780364, 0.3667541015524296, 0.39760831479768338, 0.42017521636505745, 0.41936155918127238, 0.33803961944475219, 0.33998332945141224]
+</code></pre><p>&#x901A;&#x8FC7;sklearn&#x7684;roc_curve&#x51FD;&#x6570;&#x8BA1;&#x7B97;false positive rate&#x548C;true positive rate&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;threshold&#xFF1A;</p>
+<pre class="language-"><code class="lang-python">fpr<span class="token punctuation">,</span> tpr<span class="token punctuation">,</span> thresholds <span class="token operator">=</span> roc_curve<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> 
+                                 y_score<span class="token punctuation">,</span> 
+                                 drop_intermediate<span class="token operator">=</span><span class="token boolean">False</span><span class="token punctuation">)</span>
+</code></pre>
+<p>&#x8BA1;&#x7B97;&#x5F97;&#x5230;&#x7684;&#x503C;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre class="language-"><code>fpr
+array([0.        , 0.        , 0.14285714, 0.14285714, 0.14285714,
+       0.28571429, 0.42857143, 0.57142857, 0.71428571, 0.85714286,
+       1.        ])
+
+tpr
+array([0.        , 0.33333333, 0.33333333, 0.66666667, 1.        ,
+       1.        , 1.        , 1.        , 1.        , 1.        ,
+       1.        ])
+
+thresholds
+array([1.42600527, 0.42600527, 0.42017522, 0.41936156, 0.39760831,
+       0.38769987, 0.3667541 , 0.33998333, 0.33803962, 0.32367439,
+       0.3168962 ])
+</code></pre><footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
+2020-07-09 
 </span></footer>
                                 
                                 </section>
@@ -984,7 +1047,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
                 </a>
                 
                 
-                <a href="sklearn.metrics.roc_auc_score用法.html" class="navigation navigation-next " aria-label="Next page: sklearn.metrics.roc_auc_score用法">
+                <a href="ROC曲线下的面积auc.html" class="navigation navigation-next " aria-label="Next page: ROC曲线下的面积auc">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -995,7 +1058,7 @@ plt<span class="token punctuation">.</span>plot<span class="token punctuation">(
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sklearn.metrics.roc_curve用法","level":"1.3.8","depth":2,"next":{"title":"sklearn.metrics.roc_auc_score用法","level":"1.3.9","depth":2,"path":"Chapter2/sklearn.metrics.roc_auc_score用法.md","ref":"Chapter2/sklearn.metrics.roc_auc_score用法.md","articles":[]},"previous":{"title":"sklearn.metrics.f1_score用法","level":"1.3.7","depth":2,"path":"Chapter2/sklearn.metrics.f1_score用法.md","ref":"Chapter2/sklearn.metrics.f1_score用法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter2/sklearn.metrics.roc_curve用法.md","mtime":"2020-05-23T07:57:11.269Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-08T14:54:31.280Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"sklearn.metrics.roc_curve用法","level":"1.3.8","depth":2,"next":{"title":"ROC曲线下的面积auc","level":"1.3.9","depth":2,"path":"Chapter2/ROC曲线下的面积auc.md","ref":"Chapter2/ROC曲线下的面积auc.md","articles":[]},"previous":{"title":"sklearn.metrics.f1_score用法","level":"1.3.7","depth":2,"path":"Chapter2/sklearn.metrics.f1_score用法.md","ref":"Chapter2/sklearn.metrics.f1_score用法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter2/sklearn.metrics.roc_curve用法.md","mtime":"2020-07-09T02:27:42.780Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-07-09T07:59:20.320Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

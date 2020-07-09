@@ -7,7 +7,8 @@
 方差：模型对于不同训练样本集的敏感程度
 噪声：数据集本身的一项属性
 同样的数据，（cos函数上的点加上噪声），我们用同样的模型（polynomial），但是超参数却不同（degree =1,4,15）,会得到不同的拟合效果：
-<img src="C:\Users\Hu\Desktop\20200220153752870.png" alt="20200220153752870" style="zoom:50%;" />
+
+<center><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200709155824.png" alt="20200220153752870" style="zoom:50%;" /></center>
 
 第一个模型太简单，模型本身就拟合不了这些数据（高偏差，underfitting）；
 第二个模型可以看成几乎完美地拟合了数据；
@@ -23,7 +24,7 @@
 
 不过有时画出单个超参数与训练分数和验证分数的关系图，有助于观察该模型在该超参数取值时，是否过拟合或欠拟合的情况发生，如下两个图：
 
-<img src="C:\Users\Hu\Desktop\20200220162454629.png" alt="20200220162454629" style="zoom:80%;" />
+<center><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200709155803.png" alt="20200220162454629" style="zoom: 67%;" /></center>
 
 如图是SVM在不同gamma时，它在训练集和交叉验证上的分数：
 gamma很小时，训练分数和验证分数都很低，为欠拟合；
@@ -31,7 +32,7 @@ gamma逐渐增加时，两个分数都较高，此时模型相对不错；
 gamma太高时，训练分数高，验证分数低，学习器会过拟合。
 本例中，可以选验证集准确率开始下降，而测试集越来越高那个转折点作为gamma的最优选择。
 
-![20200220162350919](C:\Users\Hu\Desktop\20200220162350919.png)
+<center><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200709155632.png" alt="20200220162350919" style="zoom:67%;" /></center>
 
 如上图，max_depth的最佳值应该定位5
 
@@ -128,7 +129,7 @@ plt.legend(loc="best")
 
 ```
 
-<img src="F:\GithubWorkspace\小项目\Scipy\线性代数\va.png" alt="va" style="zoom:25%;" />
+<center><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200709155702.png" alt="va" style="zoom: 33%;" /></center>
 
 ## 案例 2
 
@@ -193,7 +194,7 @@ ModelComplexity(X_train, y_train)
 
 画图时，横轴为 `param_range`，纵轴为 `scoreing`：
 
-<img src="F:\GithubWorkspace\小项目\Scipy\线性代数\va2.png" alt="va2" style="zoom:24%;" />
+<center><img src="https://raw.githubusercontent.com/HG1227/image/master/img_tuchuang/20200709155730.png" alt="va2" style="zoom: 25%;" /></center>
 
 # 参考
 
