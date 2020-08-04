@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>sklearn.metrics.recall_score用法 · python 学习记录</title>
+        <title>sklearn.metrics.mean_absolute_error用法 · python 学习记录</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -111,10 +111,10 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="sklearn.metrics.f1_score用法.html" />
+    <link rel="next" href="sklearn.metrics.r2_score用法.html" />
     
     
-    <link rel="prev" href="sklearn.metrics.precision_score用法.html" />
+    <link rel="prev" href="sklearn.metrics.mean_squared_error用法.html" />
     
 
     </head>
@@ -315,7 +315,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.3.2" data-path="sklearn.metrics.mean_absolute_error用法.html">
+        <li class="chapter active" data-level="1.3.2" data-path="sklearn.metrics.mean_absolute_error用法.html">
             
                 <a href="sklearn.metrics.mean_absolute_error用法.html">
             
@@ -406,7 +406,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.3.9" data-path="sklearn.metrics.recall_score用法.html">
+        <li class="chapter " data-level="1.3.9" data-path="sklearn.metrics.recall_score用法.html">
             
                 <a href="sklearn.metrics.recall_score用法.html">
             
@@ -984,7 +984,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >sklearn.metrics.recall_score用法</a>
+        <a href=".." >sklearn.metrics.mean_absolute_error用法</a>
     </h1>
 </div>
 
@@ -999,86 +999,71 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#sklearnmetricsrecallscore&#x7528;&#x6CD5;">sklearn.metrics.recall_score&#x7528;&#x6CD5;</a></li></ul></div><a href="#sklearnmetricsrecallscore&#x7528;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sklearnmetricsrecallscore&#x7528;&#x6CD5;"><a name="sklearnmetricsrecallscore&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#sklearnmetricsrecallscore&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>sklearn.metrics.recall_score&#x7528;&#x6CD5;</h1>
-<p><strong>&#x53EC;&#x56DE;&#x7387;recall</strong></p>
-<pre class="language-"><code class="lang-python">sklearn<span class="token punctuation">.</span>metrics<span class="token punctuation">.</span>precision_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> 
-                                y_pred<span class="token punctuation">,</span> 
-                                labels<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                pos_label<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">,</span> 
-                                average<span class="token operator">=</span><span class="token string">&apos;binary&apos;</span><span class="token punctuation">,</span> 
-                                sample_weight<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
-                                zero_division<span class="token operator">=</span><span class="token string">&apos;warn&apos;</span>
-                               <span class="token punctuation">)</span>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-anchor"></i><ul><li><a href="#sklearnmetricsmeanabsoluteerror&#x7528;&#x6CD5;">sklearn.metrics.mean_absolute_error&#x7528;&#x6CD5;</a></li></ul></div><a href="#sklearnmetricsmeanabsoluteerror&#x7528;&#x6CD5;" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="sklearnmetricsmeanabsoluteerror&#x7528;&#x6CD5;"><a name="sklearnmetricsmeanabsoluteerror&#x7528;&#x6CD5;" class="anchor-navigation-ex-anchor" href="#sklearnmetricsmeanabsoluteerror&#x7528;&#x6CD5;"><i class="fa fa-link" aria-hidden="true"></i></a>sklearn.metrics.mean_absolute_error&#x7528;&#x6CD5;</h1>
+<p>&#x5E73;&#x5747;&#x7EDD;&#x5BF9;&#x8BEF;&#x5DEE;(MAE)</p>
+<ul>
+<li>Mean Absolute Error &#xFF0C;&#x5E73;&#x5747;&#x7EDD;&#x5BF9;&#x8BEF;&#x5DEE;</li>
+<li>&#x5B83;&#x8868;&#x793A;&#x9884;&#x6D4B;&#x503C;&#x548C;&#x89C2;&#x6D4B;&#x503C;&#x4E4B;&#x95F4;&#x7EDD;&#x5BF9;&#x8BEF;&#x5DEE;&#x7684;&#x5E73;&#x5747;&#x503C;&#x3002;</li>
+<li>&#x662F;&#x7EDD;&#x5BF9;&#x8BEF;&#x5DEE;&#x7684;&#x5E73;&#x5747;&#x503C;</li>
+<li>&#x80FD;&#x66F4;&#x597D;&#x5730;&#x53CD;&#x6620;&#x9884;&#x6D4B;&#x503C;&#x8BEF;&#x5DEE;&#x7684;&#x5B9E;&#x9645;&#x60C5;&#x51B5;.</li>
+</ul>
+<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>M</mi><mi>A</mi><mi>E</mi><mo>(</mo><mi>X</mi><mo separator="true">,</mo><mi>h</mi><mo>)</mo><mo>=</mo><mfrac><mrow><mn>1</mn></mrow><mrow><mi>m</mi></mrow></mfrac><msubsup><mo>&#x2211;</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mrow><mi>m</mi></mrow></msubsup><mrow><mo fence="true">&#x2223;</mo><mi>h</mi><mrow><mo fence="true">(</mo><msub><mi>x</mi><mrow><mi>i</mi></mrow></msub><mo fence="true">)</mo></mrow><mo>&#x2212;</mo><msub><mi>y</mi><mrow><mi>i</mi></mrow></msub><mo fence="true">&#x2223;</mo></mrow></mrow><annotation encoding="application/x-tex">
+M A E(X, h)=\frac{1}{m} \sum_{i=1}^{m}\left|h\left(x_{i}\right)-y_{i}\right|
+</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:1.6513970000000002em;"></span><span class="strut bottom" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="base displaystyle textstyle uncramped"><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mord mathit">A</span><span class="mord mathit" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathit" style="margin-right:0.07847em;">X</span><span class="mpunct">,</span><span class="mord mathit">h</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord reset-textstyle displaystyle textstyle uncramped"><span class="mopen sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span><span class="mfrac"><span class="vlist"><span style="top:0.686em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle cramped"><span class="mord textstyle cramped"><span class="mord mathit">m</span></span></span></span><span style="top:-0.22999999999999998em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped frac-line"></span></span><span style="top:-0.677em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle textstyle uncramped"><span class="mord textstyle uncramped"><span class="mord mathrm">1</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="mclose sizing reset-size5 size5 reset-textstyle textstyle uncramped nulldelimiter"></span></span><span class="mop op-limits"><span class="vlist"><span style="top:1.1776689999999999em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span><span class="mrel mtight">=</span><span class="mord mathrm mtight">1</span></span></span></span><span style="top:-0.000005000000000143778em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span><span class="mop op-symbol large-op">&#x2211;</span></span></span><span style="top:-1.2500050000000003em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle uncramped mtight"><span class="mord scriptstyle uncramped mtight"><span class="mord mathit mtight">m</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span><span class="minner displaystyle textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2223;</span><span class="mord mathit">h</span><span class="minner displaystyle textstyle uncramped"><span class="mopen style-wrap reset-textstyle textstyle uncramped" style="top:0em;">(</span><span class="mord"><span class="mord mathit">x</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:0em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">)</span></span><span class="mbin">&#x2212;</span><span class="mord"><span class="mord mathit" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist"><span style="top:0.15em;margin-right:0.05em;margin-left:-0.03588em;"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span><span class="reset-textstyle scriptstyle cramped mtight"><span class="mord scriptstyle cramped mtight"><span class="mord mathit mtight">i</span></span></span></span><span class="baseline-fix"><span class="fontsize-ensurer reset-size5 size5"><span style="font-size:0em;">&#x200B;</span></span>&#x200B;</span></span></span></span><span class="mclose style-wrap reset-textstyle textstyle uncramped" style="top:0em;">&#x2223;</span></span></span></span></span></span></p>
+<pre class="language-"><code class="lang-python">sklearn<span class="token punctuation">.</span>metrics<span class="token punctuation">.</span>mean_absolute_error<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> 
+                                    y_pred<span class="token punctuation">,</span> 
+                                    <span class="token operator">*</span><span class="token punctuation">,</span> 
+                                    sample_weight<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> 
+                                    multioutput<span class="token operator">=</span><span class="token string">&apos;uniform_average&apos;</span><span class="token punctuation">)</span>
 </code></pre>
-<p><strong>Parameters</strong>:</p>
+<p>&#x53C2;&#x6570;</p>
 <ul>
-<li><strong>y_true</strong> :<strong>1d array-like, or label indicator array / sparse matrix</strong></li>
-<li><strong>y_pred</strong> :<strong>1d array-like, or label indicator array / sparse matrix</strong></li>
-<li><strong>average</strong> : &#x8BA1;&#x7B97;&#x7C7B;&#x578B; <strong>string, [None, &#x2018;binary&#x2019; (default), &#x2018;micro&#x2019;, &#x2018;macro&#x2019;, &#x2018;samples&#x2019;, &#x2018;weighted&#x2019;]</strong>
-average&#x53C2;&#x6570;&#x5B9A;&#x4E49;&#x4E86;&#x8BE5;&#x6307;&#x6807;&#x7684;&#x8BA1;&#x7B97;&#x65B9;&#x6CD5;&#xFF0C;&#x4E8C;&#x5206;&#x7C7B;&#x65F6;average&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x662F;binary&#xFF0C;&#x591A;&#x5206;&#x7C7B;&#x65F6;&#xFF0C;&#x53EF;&#x9009;&#x53C2;&#x6570;&#x6709;micro&#x3001;macro&#x3001;weighted&#x548C;samples&#x3002;</li>
-<li><strong>sample_weight</strong> : &#x6837;&#x672C;&#x6743;&#x91CD;</li>
+<li><p><strong>y_true</strong> &#xFF1A;<em>array-like of shape (n_samples,) or (n_samples, n_outputs)</em></p>
+<p>Ground truth (correct) target values.</p>
+</li>
+<li><p><strong>y_pred</strong> &#xFF1A; array-like of shape (n_samples,) or (n_samples, n_outputs)</p>
+<p>Estimated target values.</p>
+</li>
+<li><p><strong>sample_weight</strong> &#xFF1A;array-like of shape (n_samples,), optional
+&#x6837;&#x672C;&#x6743;&#x91CD;</p>
+</li>
+<li><p><strong>multioutput</strong> &#xFF1A;<strong>string in [&#x2018;raw_values&#x2019;, &#x2018;uniform_average&#x2019;] or array-like of shape (n_outputs)</strong>
+&#x5B9A;&#x4E49;&#x591A;&#x4E2A;&#x8F93;&#x51FA;&#x503C;&#x7684;&#x805A;&#x5408;&#x3002;&#x7C7B;&#x4F3C;&#x6570;&#x7EC4;&#x7684;&#x503C;&#x5B9A;&#x4E49;&#x7528;&#x4E8E;&#x5E73;&#x5747;&#x9519;&#x8BEF;&#x7684;&#x6743;&#x91CD;&#x3002;
+<strong>&#x2018;raw_values&#x2019; :</strong> Returns a full set of errors in case of multioutput input.
+<strong>&#x2018;uniform_average&#x2019; :</strong> Errors of all outputs are averaged with uniform weight. </p>
+</li>
 </ul>
-<p>&#x53C2;&#x6570;average</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:center"><strong>&#x9009;&#x9879;</strong></th>
-<th style="text-align:center"><strong>&#x542B;&#x4E49;</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:center">binary</td>
-<td style="text-align:center">&#x4E8C;&#x5206;&#x7C7B;</td>
-</tr>
-<tr>
-<td style="text-align:center">micro</td>
-<td style="text-align:center">&#x7EDF;&#x8BA1;&#x5168;&#x5C40;TP&#x548C;FP&#x6765;&#x8BA1;&#x7B97;</td>
-</tr>
-<tr>
-<td style="text-align:center">macro</td>
-<td style="text-align:center">&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x6807;&#x7B7E;&#x7684;&#x672A;&#x52A0;&#x6743;&#x5747;&#x503C;&#xFF08;&#x4E0D;&#x8003;&#x8651;&#x4E0D;&#x5E73;&#x8861;&#xFF09;</td>
-</tr>
-<tr>
-<td style="text-align:center">weighted</td>
-<td style="text-align:center">&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x6807;&#x7B7E;&#x7B49;&#x7B49;&#x52A0;&#x6743;&#x5747;&#x503C;&#xFF08;&#x8003;&#x8651;&#x4E0D;&#x5E73;&#x8861;&#xFF09;</td>
-</tr>
-<tr>
-<td style="text-align:center">samples</td>
-<td style="text-align:center">&#x8BA1;&#x7B97;&#x6BCF;&#x4E2A;&#x5B9E;&#x4F8B;&#x627E;&#x51FA;&#x5176;&#x5747;&#x503C;</td>
-</tr>
-<tr>
-<td style="text-align:center"><strong>None</strong></td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x6BCF;&#x7C7B;&#x7684;&#x7CBE;&#x786E;&#x5EA6;</td>
-</tr>
-</tbody>
-</table>
-<p><br></p>
-<p><strong>Returns</strong>:</p>
+<p>&#x8FD4;&#x56DE;&#x503C;&#xFF1A;</p>
 <ul>
-<li><strong>precision</strong>:<strong>float (if average is not None) or array of float, shape = [n_unique_labels]</strong></li>
+<li><p><strong>loss</strong>&#xFF1A;<strong>float or ndarray of floats</strong></p>
+<p>If multioutput is &#x2018;raw_values&#x2019;, then mean absolute error is returned for each output separately. If multioutput is &#x2018;uniform_average&#x2019; or an ndarray of weights, then the weighted average of all output errors is returned.</p>
+<p>MAE output is non-negative floating point. The best value is 0.0.</p>
+</li>
 </ul>
-<p><br></p>
-<p><strong>Examples</strong>:</p>
-<pre class="language-"><code class="lang-python"><span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> <span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> recall_score
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> y_true <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> y_pred <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> recall_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> average<span class="token operator">=</span><span class="token string">&apos;macro&apos;</span><span class="token punctuation">)</span>
-<span class="token number">0.33</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> recall_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> average<span class="token operator">=</span><span class="token string">&apos;micro&apos;</span><span class="token punctuation">)</span>
-<span class="token number">0.33</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> recall_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> average<span class="token operator">=</span><span class="token string">&apos;weighted&apos;</span><span class="token punctuation">)</span>
-<span class="token number">0.33</span><span class="token punctuation">.</span><span class="token punctuation">.</span><span class="token punctuation">.</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> recall_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> average<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>
-array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">1</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> y_true <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">]</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> recall_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> average<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">)</span>
-array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span> <span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">.</span> <span class="token punctuation">]</span><span class="token punctuation">)</span>
-<span class="token operator">&gt;&gt;</span><span class="token operator">&gt;</span> recall_score<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> average<span class="token operator">=</span><span class="token boolean">None</span><span class="token punctuation">,</span> zero_division<span class="token operator">=</span><span class="token number">1</span><span class="token punctuation">)</span>
-array<span class="token punctuation">(</span><span class="token punctuation">[</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">.</span> <span class="token punctuation">]</span><span class="token punctuation">)</span>
+<p><strong>Examples</strong></p>
+<pre class="language-"><code class="lang-python"><span class="token keyword">from</span> sklearn<span class="token punctuation">.</span>metrics <span class="token keyword">import</span> mean_absolute_error
+y_true <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">3</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">7</span><span class="token punctuation">]</span>
+y_pred <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token number">2.5</span><span class="token punctuation">,</span> <span class="token number">0.0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">,</span> <span class="token number">8</span><span class="token punctuation">]</span>
+mean_absolute_error<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+<span class="token comment"># 0.5</span>
+
+y_true <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0.5</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">1</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">7</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">6</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+y_pred <span class="token operator">=</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token operator">-</span><span class="token number">1</span><span class="token punctuation">,</span> <span class="token number">2</span><span class="token punctuation">]</span><span class="token punctuation">,</span> <span class="token punctuation">[</span><span class="token number">8</span><span class="token punctuation">,</span> <span class="token operator">-</span><span class="token number">5</span><span class="token punctuation">]</span><span class="token punctuation">]</span>
+mean_absolute_error<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">)</span>
+<span class="token comment"># 0.75</span>
+
+mean_absolute_error<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> multioutput<span class="token operator">=</span><span class="token string">&apos;uniform_average&apos;</span><span class="token punctuation">)</span>
+<span class="token comment"># 0.75</span>
+
+mean_absolute_error<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> multioutput<span class="token operator">=</span><span class="token string">&apos;raw_values&apos;</span><span class="token punctuation">)</span>
+<span class="token comment"># array([0.5, 1. ])</span>
+
+mean_absolute_error<span class="token punctuation">(</span>y_true<span class="token punctuation">,</span> y_pred<span class="token punctuation">,</span> multioutput<span class="token operator">=</span><span class="token punctuation">[</span><span class="token number">0.3</span><span class="token punctuation">,</span> <span class="token number">0.7</span><span class="token punctuation">]</span><span class="token punctuation">)</span>
+<span class="token comment"># 0.85 </span>
+<span class="token comment"># 0.5*0.3+1*0.7=0.85</span>
 </code></pre>
 <footer class="page-footer"><span class="copyright">  </span><span class="footer-modification">Update time&#xFF1A;
-2020-05-23 
+2020-08-04 
 </span></footer>
                                 
                                 </section>
@@ -1106,12 +1091,12 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
 
             
                 
-                <a href="sklearn.metrics.precision_score用法.html" class="navigation navigation-prev " aria-label="Previous page: sklearn.metrics.precision_score用法">
+                <a href="sklearn.metrics.mean_squared_error用法.html" class="navigation navigation-prev " aria-label="Previous page: sklearn.metrics.mean_squared_error用法">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="sklearn.metrics.f1_score用法.html" class="navigation navigation-next " aria-label="Next page: sklearn.metrics.f1_score用法">
+                <a href="sklearn.metrics.r2_score用法.html" class="navigation navigation-next " aria-label="Next page: sklearn.metrics.r2_score用法">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -1122,7 +1107,7 @@ array<span class="token punctuation">(</span><span class="token punctuation">[</
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"sklearn.metrics.recall_score用法","level":"1.3.9","depth":2,"next":{"title":"sklearn.metrics.f1_score用法","level":"1.3.10","depth":2,"path":"Chapter2/sklearn.metrics.f1_score用法.md","ref":"Chapter2/sklearn.metrics.f1_score用法.md","articles":[]},"previous":{"title":"sklearn.metrics.precision_score用法","level":"1.3.8","depth":2,"path":"Chapter2/sklearn.metrics.precision_score用法.md","ref":"Chapter2/sklearn.metrics.precision_score用法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter2/sklearn.metrics.recall_score用法.md","mtime":"2020-05-23T07:57:11.267Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-04T14:54:37.491Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"sklearn.metrics.mean_absolute_error用法","level":"1.3.2","depth":2,"next":{"title":"sklearn.metrics.r2_score用法","level":"1.3.3","depth":2,"path":"Chapter2/sklearn.metrics.r2_score用法.md","ref":"Chapter2/sklearn.metrics.r2_score用法.md","articles":[]},"previous":{"title":"sklearn.metrics.mean_squared_error用法","level":"1.3.1","depth":2,"path":"Chapter2/sklearn.metrics.mean_squared_error用法.md","ref":"Chapter2/sklearn.metrics.mean_squared_error用法.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-highlight","-livereload","search-plus@^0.0.11","simple-page-toc@^0.1.1","disqus@^0.1.0","prism@^2.1.0","prism-themes@^0.0.2","theme-comscore","anchors@^0.7.1","ace@^0.3.2","emphasize@^1.1.0","katex@^1.1.3","splitter@^0.0.8","expandable-chapters","local-video@^1.0.1","anchor-navigation-ex@0.1.8","custom-favicon","todo@^0.1.3","hide-element","copy-code-button","tbfed-pagefooter","advanced-emoji","lightbox","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":" ","modify_label":"Update time：","modify_format":"YYYY-MM-DD "},"prism":{"css":["prism-themes/themes/prism-vs.css"]},"disqus":{"useIdentifier":false,"shortName":"HG1227"},"styles":{"website":"styles/website.css"},"emphasize":{},"ace":{},"simple-page-toc":{"maxDepth":3,"skipFirstH1":true},"todo":{},"splitter":{},"hide-element":{"elements":[".gitbook-link"]},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"favicon":"favicon.ico","lightbox":{"jquery":true,"sameUuid":false},"theme-comscore":{},"prism-themes":{},"custom-favicon":{},"local-video":{},"copy-code-button":{},"advanced-emoji":{"embedEmojis":false},"include-codeblock":{"template":"ace","unindent":true,"edit":true},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"expandable-chapters":{},"search-plus":{}},"theme":"default","author":"HHG","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"readme.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"python 学习记录","language":"zh-hans","output.name":"site","links":{"sidebar":{"Home":""}},"gitbook":"*","description":"。"},"file":{"path":"Chapter2/sklearn.metrics.mean_absolute_error用法.md","mtime":"2020-08-04T14:05:14.849Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2020-08-04T14:54:37.491Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

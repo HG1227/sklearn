@@ -115,7 +115,7 @@ h4{
     font-size: 16px;
 	letter-spacing: 0.2;
 	
-    font-family:'Ubuntu', 'Source Sans Pro', sans-serif !important;
+    font-family:'Ubuntu', 'Source Sans Pro' ,'Microsoft YaHei' !important;
 }
 
 pre[class*="language-"] {
