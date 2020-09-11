@@ -1,7 +1,5 @@
 # feature_selection.f_regression用法
 
-# feature_selection.f_regression 用法
-
 
 
 ```python
